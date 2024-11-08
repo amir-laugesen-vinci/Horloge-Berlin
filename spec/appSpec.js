@@ -11,6 +11,6 @@ describe("BerlinClock function should return a matrice the TimeStamp", function(
 
         console.log(date)
 
-        expect(result).toBe(13);
+        expect(result).toBe("RRRR");
     });
 });

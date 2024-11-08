@@ -1,15 +1,12 @@
 export class Main{
-    BerlinClock(timeStamp){
-        console.log("test")
+    BerlinClock(timestamp){
+        const date = new Date(timestamp);
+        const minutes = date.getUTCMinutes();
 
-        const date = new Date(timeStamp);
+        const simpleMinutes = minutes%5;
+        const lignesSimpleMinutes = 'J'.repeat(simpleMinutes) + 'R'.repeat(4-simpleMinutes);
 
-        
-        const hours = date.getHours();
-        const minutes = date.getMinutes();
-        const seconds = date.getSeconds();
-        
-        return hours;
+        return lignesSimpleMinutes;
         
     }
 }
