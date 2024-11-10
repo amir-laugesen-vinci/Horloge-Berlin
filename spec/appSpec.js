@@ -125,5 +125,17 @@ describe("BerlinClock function should return a matrice the TimeStamp", function(
             const result = main.BerlinClock(timestamp);
             expect(result).toBe("OCCC\nCCCCCCCCCCC\nCCCC\nOCCC");
         });
+
+        it("should return the correct Berlin clock format for 10 hours", function() {
+            const timestamp = new Date(Date.UTC(1970, 0, 1, 10, 0)).getTime();  // 10:00
+            const result = main.BerlinClock(timestamp);
+            expect(result).toBe("CCCC\nCCCCCCCCCCC\nCCCC\nOOCC");
+        });
+
+        it("should return the correct Berlin clock format for 24 hours", function() {
+            const timestamp = new Date(Date.UTC(1970, 0, 1, 23, 0)).getTime();  // 23:00
+            const result = main.BerlinClock(timestamp);
+            expect(result).toBe("CCCC\nCCCCCCCCCCC\nOOOC\nOOOO");
+        });
     });
 });
