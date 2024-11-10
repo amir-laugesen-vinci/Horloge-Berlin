@@ -2,7 +2,7 @@ export class Main {
     BerlinClock(timestamp) {
         const date = new Date(timestamp);
         
-
+        const seconds = date.getUTCSeconds();
         const minutes = date.getUTCMinutes();
         const hours = date.getUTCHours();
 
@@ -17,8 +17,9 @@ export class Main {
         const lignesSimpleHours = 'O'.repeat(simpleHours) + 'C'.repeat(4 - simpleHours);
         const lignesHeurePar5 = 'O'.repeat(heuresPar5) + 'C'.repeat(4 - heuresPar5);
 
+        const ampouleSecond = (seconds % 2 === 0) ? 'O' : 'C';
 
-        return lignesSimpleMinutes + "\n" + lignesMinutesPar5 + "\n" + lignesSimpleHours + "\n" + lignesHeurePar5;
+        return lignesSimpleMinutes + "\n" + lignesMinutesPar5 + "\n" + lignesSimpleHours + "\n" + lignesHeurePar5 + "\n" + ampouleSecond;
 
 
     }
