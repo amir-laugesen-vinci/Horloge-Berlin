@@ -15,9 +15,4 @@ export class Main {
         const lignesSimpleHours = 'O'.repeat(simpleHours) + 'C'.repeat(4 - simpleHours);
         return lignesSimpleMinutes + "\n" + lignesMinutesPar5 + "\n" + lignesSimpleHours;
     }
-
-    test(timestamp){
-        const date = new Date(timestamp);
-    }
-
 }
