@@ -58,5 +58,11 @@ describe("BerlinClock function should return a matrice the TimeStamp", function(
             const result = main.BerlinClock(timestamp);
             expect(result).toBe("CCCC\nOOOCCCCCCCC");
         });
+
+        it("should return the correct Berlin clock format for 20 minutes", function() {
+            const timestamp = new Date(Date.UTC(1970, 0, 1, 0, 20)).getTime();  // 00:20
+            const result = main.BerlinClock(timestamp);
+            expect(result).toBe("CCCC\nOOOOCCCCCCC");
+        });
     });
 });
