@@ -137,4 +137,10 @@ describe("BerlinClock function should return a string the TimeStamp", function()
             expect(result).toBe("CCCC\nCCCCCCCCCCC\nOOOC\nOOOO\nO");
         });
 
+        it("should return the correct Berlin clock format for even seconds", function() {
+            const timestamp = new Date(Date.UTC(1970, 0, 1, 0, 0, 0)).getTime();  // 00:00:00
+            const result = main.BerlinClock(timestamp);
+            expect(result).toBe("CCCC\nCCCCCCCCCCC\nCCCC\nCCCC\nO");
+        });
+        
     });
