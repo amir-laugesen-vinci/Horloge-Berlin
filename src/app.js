@@ -18,7 +18,7 @@ export class Main {
         const lignesHeurePar5 = 'O'.repeat(heuresPar5) + 'C'.repeat(4 - heuresPar5);
 
 
-        return lignesSimpleMinutes + "\n" + lignesMinutesPar5 + "\n" + lignesSimpleHours + "\n" + lignesHeuresPar5;
+        return lignesSimpleMinutes + "\n" + lignesMinutesPar5 + "\n" + lignesSimpleHours + "\n" + lignesHeurePar5;
 
 
     }
