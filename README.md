@@ -1,2 +1,1 @@
-Thanh Truong
-Amir Laugesen
+Thanh Truong --- Amir Laugesen
