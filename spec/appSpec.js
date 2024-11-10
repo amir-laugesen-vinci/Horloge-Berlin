@@ -59,6 +59,12 @@ describe("BerlinClock function should return a matrice the TimeStamp", function(
             expect(result).toBe("CCCC\nOOOCCCCCCCC");
         });
 
+        it("should return the correct Berlin clock format for 35 minutes", function() {
+            const timestamp = new Date(Date.UTC(1970, 0, 1, 0, 35)).getTime();  // 00:35
+            const result = main.BerlinClock(timestamp);
+            expect(result).toBe("CCCC\nOOOOOOOCCCC");
+        });
+
         it("should return the correct Berlin clock format for 40 minutes", function() {
             const timestamp = new Date(Date.UTC(1970, 0, 1, 0, 40)).getTime();  // 00:40
             const result = main.BerlinClock(timestamp);
@@ -81,6 +87,12 @@ describe("BerlinClock function should return a matrice the TimeStamp", function(
             const timestamp = new Date(Date.UTC(1970, 0, 1, 0, 55)).getTime();  // 00:55
             const result = main.BerlinClock(timestamp);
             expect(result).toBe("CCCC\nOOOOOOOOOOO");
+        });
+
+        it("should return the correct Berlin clock format for 61 minutes", function() {
+            const timestamp = new Date(Date.UTC(1970, 0, 1, 0, 61)).getTime();  // 00:61
+            const result = main.BerlinClock(timestamp);
+            expect(result).toBe("OCCC\nCCCCCCCCCCC");
         });
     });
 });
