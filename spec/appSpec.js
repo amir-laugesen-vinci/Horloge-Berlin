@@ -59,10 +59,10 @@ describe("BerlinClock function should return a matrice the TimeStamp", function(
             expect(result).toBe("CCCC\nOOOCCCCCCCC");
         });
 
-        it("should return the correct Berlin clock format for 35 minutes", function() {
-            const timestamp = new Date(Date.UTC(1970, 0, 1, 0, 35)).getTime();  // 00:35
+        it("should return the correct Berlin clock format for 40 minutes", function() {
+            const timestamp = new Date(Date.UTC(1970, 0, 1, 0, 40)).getTime();  // 00:40
             const result = main.BerlinClock(timestamp);
-            expect(result).toBe("CCCC\nOOOOOOOCCCC");
+            expect(result).toBe("CCCC\nOOOOOOOOCCC");
         });
     });
 });
