@@ -4,7 +4,7 @@ export class Main{
         const minutes = date.getUTCMinutes();
 
         const simpleMinutes = minutes%5;
-        const lignesSimpleMinutes = 'J'.repeat(simpleMinutes) + 'R'.repeat(4-simpleMinutes);
+        const lignesSimpleMinutes = 'O'.repeat(simpleMinutes) + 'C'.repeat(4-simpleMinutes);
 
         return lignesSimpleMinutes;
         
