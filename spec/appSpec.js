@@ -94,5 +94,12 @@ describe("BerlinClock function should return a matrice the TimeStamp", function(
             const result = main.BerlinClock(timestamp);
             expect(result).toBe("OCCC\nCCCCCCCCCCC\nOCCC");
         });
+
+        it("should return the correct Berlin clock format for 2 hours", function() {
+            const timestamp = new Date(Date.UTC(1970, 0, 1, 2, 0)).getTime();  // 02:00
+            const result = main.BerlinClock(timestamp);
+            expect(result).toBe("CCCC\nCCCCCCCCCCC\nOOCC");
+        });
+        
     });
 });
